@@ -1,29 +1,28 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <app-editor></app-editor>
-
+    <div class="container">
+      <app-header></app-header>
+      <app-editor></app-editor>
+    </div>
   </div>
 </template>
 
 <script>
 import Editor from './components/Editor.vue';
+import Header from './components/Header.vue';
 
 export default {
   name: 'app',
   components: {
     appEditor: Editor,
+    appHeader: Header,
   },
 };
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>

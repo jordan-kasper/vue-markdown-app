@@ -1,15 +1,13 @@
 <template>
-  <div class="editor__preview" v-html="markdownText">
+  <div v-html="markdownText">
     {{ markdownText }}
   </div>
 </template>
 
 <script>
-
 const marked = require('marked');
 
 export default {
-
   props: ['text'],
   name: 'app',
 
@@ -20,8 +18,20 @@ export default {
   },
   computed: {
     markdownText() {
-      return marked(this.text, { sanitize: true });
+      marked.setOptions({
+        renderer: new marked.Renderer(),
+        gfm: true,
+        tables: true,
+        breaks: true,
+        pedantic: false,
+        sanitize: true,
+        smartLists: true,
+        smartypants: false,
+      });
+      return marked(this.text);
     },
   },
 };
 </script>
+
+<style scoped></style>
