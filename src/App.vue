@@ -1,9 +1,7 @@
 <template>
-  <div id="app">
-    <div class="container">
+  <div id="app container">
       <app-header></app-header>
       <app-editor></app-editor>
-    </div>
   </div>
 </template>
 
@@ -24,5 +22,12 @@ export default {
 #app {
   margin-top: 60px;
 }
-
+.container{
+  background-color: aqua;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
 </style>

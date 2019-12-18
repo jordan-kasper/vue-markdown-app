@@ -1,18 +1,18 @@
 <template>
-  <div class="container">
+  <div>
     <div class="row">
-      <div class="input">
+      <div class="col-md-6 input">
         <h2 class="text-center">Enter Markdown Text</h2>
         <textarea
           style="height:auto"
-          rows="38"
+          rows="37"
           class="form-control"
           v-model="text"
         ></textarea>
       </div>
-      <div id="preview">
+      <div class="col-md-6 output">
         <h2 class="text-center">Preview</h2>
-        <app-preview :text="text" class="output"></app-preview>
+        <app-preview :text="text" class="output-display"></app-preview>
       </div>
     </div>
   </div>
@@ -36,12 +36,19 @@ export default {
 
 <style scoped>
 .output{
-  padding: 20px;
+  padding-top: 100px;
+  padding-left: 50px;
+  height: 900px;
+  padding-right: 0px;
+
+}
+.output-display{
   overflow-y:auto;
   height: 925px;
 }
 .input{
-  height: 925px;
-  width: 500px;
+  padding-top: 100px;
+  padding-left: 50px;
+  padding-right: 0px;
 }
 </style>
