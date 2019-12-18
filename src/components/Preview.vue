@@ -17,6 +17,9 @@ export default {
     };
   },
   computed: {
+    /**
+     * renders the prop text to HTML based off the markdown that is passed.
+     */
     markdownText() {
       marked.setOptions({
         renderer: new marked.Renderer(),
